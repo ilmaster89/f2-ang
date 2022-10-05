@@ -1,0 +1,4 @@
+<h1>String List</h1>
+<p *ngFor="let s of strings">{{s}}</p>
+<hr>
+<app-detail (newStringEmitter)="addString($event)"></app-detail>

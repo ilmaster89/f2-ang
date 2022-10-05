@@ -1,0 +1,12 @@
+<h1>Add Person</h1>
+<form (submit)="newPersonEvent()">
+    <p>Nome: <input type="text" name="nome" [(ngModel)]="person.nome"></p>
+    <p>Cognome: <input type="text" name="cognome" [(ngModel)]="person.cognome"></p>
+    <button type="submit">Add</button>
+</form>
+
+<h1>Person Detail</h1>
+<div *ngIf="singlePerson">
+    <p>Nome: {{singlePerson.nome}}</p>
+    <p>Cognome: {{singlePerson.cognome}}</p>
+</div>

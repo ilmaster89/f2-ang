@@ -1,0 +1,8 @@
+<h1>Person List</h1>
+<div *ngFor="let p of people">
+    <p>{{p.cognome}}</p>
+    <button (click) = "personDetail(p)">Detail</button>
+    <hr>
+</div>
+
+<app-person-detail [singlePerson]="selectedPerson" (newPersonEmitter)="addPerson($event)"></app-person-detail>
